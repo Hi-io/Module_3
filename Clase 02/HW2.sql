@@ -11,6 +11,7 @@ ALTER TABLE `producto` CHANGE `Concepto` `Producto` VARCHAR(100) CHARACTER SET u
 
 select * from producto;
 -- SELECT replace('Hola Mundo', 'o', ' ');
+select*from cliente;
 /*Tipos de Datos*/
 ALTER TABLE `cliente` 	ADD `Latitud` DECIMAL(13,10) NOT NULL DEFAULT '0' AFTER `Y`, 
 						ADD `Longitud` DECIMAL(13,10) NOT NULL DEFAULT '0' AFTER `Latitud`;
@@ -22,6 +23,8 @@ UPDATE `cliente` SET Longitud = REPLACE(X,',','.');
 SELECT * FROM `cliente`;
 ALTER TABLE `cliente` DROP `Y`;
 ALTER TABLE `cliente` DROP `X`;
+
+select * from producto;
 
 ALTER TABLE `empleado` ADD `Salario` DECIMAL(10,2) NOT NULL DEFAULT '0' AFTER `Salario2`;
 UPDATE `empleado` SET Salario = REPLACE(Salario2,',','.');
@@ -102,6 +105,7 @@ CREATE TABLE IF NOT EXISTS `aux_venta` (
   `Motivo`				INTEGER
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
+select* from venta;
 UPDATE venta SET Cantidad = REPLACE(Cantidad, '\r', '');
 
 INSERT INTO aux_venta (IdVenta, Fecha, Fecha_Entrega, IdCliente, IdSucursal, IdEmpleado, IdProducto, Precio, Cantidad, Motivo)

@@ -21,3 +21,5 @@ MONTH,v.Fecha,'2021-01-01' #La idea es poner CURDATE() aquí, para ver las venta
 ) <1
 ;
 select * from nuevos_registros
+
+#HW2
